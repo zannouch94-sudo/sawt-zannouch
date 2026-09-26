@@ -1,0 +1,13 @@
+صوت زانوش — نسخة مربوطة بـ Supabase
+
+تم إعداد config.js مسبقًا ببيانات مشروع Supabase الذي اخترته.
+
+المتبقي قبل الاستخدام:
+1) في Supabase > Authentication > Users أنشئ حساب المدير بالبريد وكلمة مرور قوية.
+2) في Supabase > Storage أنشئ Bucket باسم: media واجعله Public.
+3) إذا كانت جداول posts/media/videos/ads والسياسات موجودة بالفعل، لا تعِد تشغيل supabase-schema.sql حتى لا تغيّر قاعدة البيانات الموجودة.
+4) إذا كانت الجداول غير موجودة، نفّذ supabase-schema.sql مرة واحدة من SQL Editor.
+5) ارفع هذه الملفات إلى Netlify أو الاستضافة التي تستخدمها.
+6) افتح /admin.html وسجّل الدخول بحساب المدير.
+
+ملاحظة أمنية: المفتاح الموجود في config.js هو Publishable Key فقط. لا تضع Service Role Key في ملفات الموقع.
