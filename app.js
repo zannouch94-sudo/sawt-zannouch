@@ -6,7 +6,7 @@ const defaultNews = [
     title: "زانوش... مدينة تتنفس الحياة",
     category: "زانوش",
     date: "26 سبتمبر 2026",
-    image: "assets/images/zannouch-01.png",
+    image: "assets/zannouch-01.png",
     excerpt: "صور من شوارع زانوش وملامح الحياة اليومية في المدينة.",
     content: "نستعرض في هذا المقال صوراً من زانوش، شوارعها، أحيائها ومشاهد من الحياة اليومية. هذا النص قابل للتعديل من لوحة الإدارة."
   },
@@ -15,7 +15,7 @@ const defaultNews = [
     title: "صور من قلب زانوش",
     category: "صور",
     date: "26 سبتمبر 2026",
-    image: "assets/images/zannouch-03.png",
+    image: "assets/zannouch-03.png",
     excerpt: "جولة بصرية في عدد من شوارع المدينة.",
     content: "جولة مصورة في عدد من شوارع زانوش، ضمن نافذة صوت زانوش على الحياة المحلية."
   },
@@ -24,7 +24,7 @@ const defaultNews = [
     title: "قصر البلدية في زانوش",
     category: "مجتمع",
     date: "26 سبتمبر 2026",
-    image: "assets/images/zannouch-09.png",
+    image: "assets/zannouch-09.png",
     excerpt: "لقطة من مقر البلدية في المدينة.",
     content: "صورة من أمام مقر البلدية في زانوش. يمكن استبدال هذا المحتوى بخبر موثق عند النشر."
   }
