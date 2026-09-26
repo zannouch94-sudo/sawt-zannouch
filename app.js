@@ -6,7 +6,7 @@ const defaultNews = [
     title: "زانوش... مدينة تتنفس الحياة",
     category: "زانوش",
     date: "26 سبتمبر 2026",
-    image: "assets/zannouch-01.png",
+    image: "zannouch-01.png",
     excerpt: "صور من شوارع زانوش وملامح الحياة اليومية في المدينة.",
     content: "نستعرض في هذا المقال صوراً من زانوش، شوارعها، أحيائها ومشاهد من الحياة اليومية. هذا النص قابل للتعديل من لوحة الإدارة."
   },
@@ -15,7 +15,7 @@ const defaultNews = [
     title: "صور من قلب زانوش",
     category: "صور",
     date: "26 سبتمبر 2026",
-    image: "assets/zannouch-03.png",
+    image: "zannouch-03.png",
     excerpt: "جولة بصرية في عدد من شوارع المدينة.",
     content: "جولة مصورة في عدد من شوارع زانوش، ضمن نافذة صوت زانوش على الحياة المحلية."
   },
@@ -24,7 +24,7 @@ const defaultNews = [
     title: "قصر البلدية في زانوش",
     category: "مجتمع",
     date: "26 سبتمبر 2026",
-    image: "assets/zannouch-09.png",
+    image: "zannouch-09.png",
     excerpt: "لقطة من مقر البلدية في المدينة.",
     content: "صورة من أمام مقر البلدية في زانوش. يمكن استبدال هذا المحتوى بخبر موثق عند النشر."
   }
@@ -108,7 +108,7 @@ function setupAdmin() {
     const item = {
       id: Date.now(),
       title: data.get("title"), category: data.get("category"), date: data.get("date") || new Date().toLocaleDateString("ar-TN"),
-      image: data.get("image") || "assets/images/zannouch-01.png",
+      image: data.get("image") || "zannouch-01.png",
       excerpt: data.get("excerpt"), content: data.get("content")
     };
     saveNews([item, ...getNews()]); form.reset(); render();
@@ -128,7 +128,7 @@ async function renderSupabaseNews(){
   if(!window.SAWT_DB) return;
   try{
     const items=await cmsNews();
-    const card=n=>`<article class="news-card"><a href="article.html?id=${n.id}" class="news-image"><img src="${n.cover_url||'assets/images/zannouch-01.png'}" alt="${esc(n.title)}" loading="lazy"></a><div class="news-body"><span class="tag">${esc(n.category||'أخبار')}</span><h3><a href="article.html?id=${n.id}">${esc(n.title)}</a></h3><p>${esc(n.excerpt||'')}</p><div class="meta">${n.published_at?new Date(n.published_at).toLocaleDateString('ar-TN'):''} • صوت زانوش</div></div></article>`;
+    const card=n=>`<article class="news-card"><a href="article.html?id=${n.id}" class="news-image"><img src="${n.cover_url||'zannouch-01.png'}" alt="${esc(n.title)}" loading="lazy"></a><div class="news-body"><span class="tag">${esc(n.category||'أخبار')}</span><h3><a href="article.html?id=${n.id}">${esc(n.title)}</a></h3><p>${esc(n.excerpt||'')}</p><div class="meta">${n.published_at?new Date(n.published_at).toLocaleDateString('ar-TN'):''} • صوت زانوش</div></div></article>`;
     const all=document.querySelector('#allNews');
     if(all) all.innerHTML=items.map(card).join('') || '<p class="empty">لا توجد منشورات منشورة بعد.</p>';
     const latest=document.querySelector('#latestNews');
